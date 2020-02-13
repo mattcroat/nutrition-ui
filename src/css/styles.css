@@ -43,7 +43,10 @@
   --font-family-serif: 'Yeseva One', serif;
   --weight-regular: 400;
   --weight-bold: 700;
-  --weight-black: 900; }
+  --weight-black: 900;
+  --transition: 300ms ease-in-out;
+  --border-radius-default: 0.4rem;
+  --border-radius-large: 0.8rem; }
 
 /* reset */
 html {
@@ -57,9 +60,10 @@ html, body {
   height: 100%; }
 
 body {
+  margin: 0;
   font-family: 'Muli', sans-serif;
   font-size: 1.6rem;
-  background-color: #fff; }
+  background-color: var(--color-white); }
 
 /* type specs */
 .t-brand {
