@@ -1,3 +1,70 @@
+/* typography */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/muli/Muli-Regular.woff2'),
+    url('../assets/fonts/muli/Muli-Regular.woff'),
+    url('../assets/fonts/muli/Muli-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/fonts/muli/Muli-Bold.woff2'),
+    url('../assets/fonts/muli/Muli-Bold.woff'),
+    url('../assets/fonts/muli/Muli-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../assets/fonts/muli/Muli-Black.woff2'),
+    url('../assets/fonts/muli/Muli-Black.woff'),
+    url('../assets/fonts/muli/Muli-Black.ttf');
+}
+
+@font-face {
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/yeseva-one/YesevaOne-Regular.woff2'),
+    url('../assets/fonts/yeseva-one/YesevaOne-Regular.woff'),
+    url('../assets/fonts/yeseva-one/YesevaOne-Regular.ttf');
+}
+
+/* variables */
+:root {
+  // colors
+  --color-charcoal-011: hsl(214, 24%, 11%);
+  --color-charcoal-021: hsl(215, 25%, 21%);
+  --color-charcoal-046: hsl(214, 3%, 46%);
+  --color-white: hsl(0, 0%, 98%);
+  --color-alarm-049: hsl(1, 90%, 49%);
+  --color-alarm-039: hsl(1, 90%, 39%);
+  --color-slate-blue-050: hsl(214, 44%, 50%);
+
+  // spacing
+  --space-eight: 0.2rem;
+  --space-quarter: 0.4rem;
+  --space-half: 0.8rem;
+  --space-default: 1.6rem;
+  --space-double: 3.2rem;
+  --space-quadruple: 6.4rem;
+  --space-oct: 12.8rem;
+
+  // typography
+  --font-family-sans: var(--font-family-sans);
+  --font-family-serif: 'Yeseva One', serif;
+  
+  // font weights
+  --weight-regular: 400;
+  --weight-bold: 700;
+  --weight-black: 900;
+}
+
 /* reset */
 html {
   box-sizing: border-box;
@@ -13,7 +80,94 @@ html, body {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 1.6rem;
   background-color: #fff;
+}
+
+/* type specs */
+.t-brand {
+  font-family: var(--font-family-sans);
+  font-size: 2.4rem;
+  font-weight: var(--weight-black);
+  line-height: 1; // ratio from font and line height being 24px
+}
+
+.t-copy-large {
+  font-family: var(--font-family-sans);
+  font-size: 1.6rem;
+  font-weight: var(--weight-bold);
+  line-height: 1; // ratio from font and line height being 24px
+}
+
+.t-display {
+  font-family: var(--font-family-serif);
+  letter-spacing: -0.2rem;
+  
+  @media (max-width: 575px) {
+    & {
+      font-size: 3.2rem;
+      line-height: 1.25; // 40px line height / 32px font size = 1.25
+      color: red;
+      background: red;
+    }
+  }
+  
+  @media (min-width: 576px) {
+    & {
+      font-size: 8rem;
+      line-height: 1.2; // 96px / 80px = 1.2
+    }
+  }
+}
+
+.t-body {
+  font-family: var(--font-family-sans);
+  font-size: 1.4rem;
+  font-weight: var(--weight-regular);
+  line-height: 1.286; // 18px / 14px = 1.285714...
+}
+
+.t-title {
+  font-family: var(--font-family-serif);
+  font-weight: var(--weight-black);
+  
+  @media (max-width: 575px) {
+    & {
+      font-size: 2.4rem;
+      line-height: 1.167; // 28px / 24px = 1.666666...
+    }
+  }
+  
+  @media (min-width: 576px) {
+    & {
+      font-size: 2.8rem;
+      line-height: 1.143; // 32px / 28px = 1.142857...
+    }
+  }
+}
+
+.t-section-number {
+  font-family: var(--font-family-serif);
+  font-size: 12rem;
+  line-height: 1rem; // same proportion
+  letter-spacing: -0.2rem;
+}
+
+.t-copy-fluid {
+  font-family: var(--font-family-sans);
+  font-weight: var(--weight-bold);
+  line-height: 1;
+
+  @media (max-width: 575px) {
+    & {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media (min-width: 576px) {
+    & {
+      font-size: 1.6rem;
+    }
+  }
 }
