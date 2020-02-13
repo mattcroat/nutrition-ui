@@ -8,11 +8,12 @@
   <body>
     
     <header>
+      <a href="#mainContent">Skip to main content</a>
       <a href="/">Nutrition</a>
       <button>Open search</button>
       <form action="">
         <label for="globalSearch">Search the Nutrition website</label>
-        <input type="search" id="globalSearch">
+        <input type="search" id="globalSearch" placeholder="Avocados, tumeric, kale, etc.">
         <button type="submit">Search</button>
       </form>
       <nav>
@@ -20,11 +21,43 @@
         <a href="/health">Health</a>
         <a href="/low-carb">Low Carb</a>
         <a href="/nutrition">Nutrition</a>
+        <button>Menu</button>
+        <div>
+          <button>Close menu</button>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/food">Food</a>
+            </li>
+            <li>
+              <a href="/health">Health</a>
+            </li>
+            <li>
+              <a href="/low-carb">Low Carb</a>
+            </li>
+          <li>
+            <a href="/nutrition">Nutrition</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/submissions">Submissions</a>
+          </li>
+          <li>
+            <a href="/careers">Careers</a>
+          </li>
+          </ul>
+          <p>Connect</p>
+          <a href="https://facebook.com">Facebook</a>
+          <a href="https://twitter.com">Twitter</a>
+        </div>
       </nav>
-      <button>Menu</button>
     </header>
 
-    <main>
+    <main id="mainContent">
       <article>
         <h1>20 Types of Berries and Their Health Benefits</h1>
         <h2>Blackberries</h2>
@@ -54,9 +87,9 @@
         </section>
         
         <section>
-          <h3>Share</h3>
-          <a href="https://facebook.com">Facebook</a>
-          <a href="https://twitter.com">Twitter</a>
+          <h3>Share this article</h3>
+          <a href="https://facebook.com">Share on Facebook</a>
+          <a href="https://twitter.com">Share on Twitter</a>
         </section>
       </article>
 
