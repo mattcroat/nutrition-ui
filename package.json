@@ -4,11 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel -p 3000 ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "dev": "yarn server & yarn scss",
+    "server": "lite-server",
+    "scss": "node-sass -w ./src/scss -o ./src/css"
   },
   "devDependencies": {
-    "node-sass": "^4.13.1",
-    "parcel-bundler": "^1.12.4"
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.13.1"
   }
 }
