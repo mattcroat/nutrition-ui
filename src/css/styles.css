@@ -37,7 +37,7 @@
   --space-half: 0.8rem;
   --space-default: 1.6rem;
   --space-double: 3.2rem;
-  --space-quadruple: 6.4rem;
+  --space-quad: 6.4rem;
   --space-oct: 12.8rem;
   --font-family-sans: var(--font-family-sans);
   --font-family-serif: 'Yeseva One', serif;
@@ -126,3 +126,32 @@ body {
   @media (min-width: 576px) {
     .t-copy-fluid {
       font-size: 1.6rem; } }
+
+/* skip nav */
+.skip-nav {
+  padding: var(--space-default);
+  display: inline-block;
+  position: absolute;
+  color: var(--color-white);
+  background-color: var(--color-charcoal-021);
+  border-radius: var(--border-radius-default);
+  text-decoration: none;
+  transition: background-color var(--transition), transform var(--transition); }
+  @media (max-width: 575px) {
+    .skip-nav {
+      transform: translate(var(--space-default), calc(var(--space-quad) * -1)); } }
+  @media (min-width: 576px) {
+    .skip-nav {
+      transform: translate(var(--space-oct), calc(var(--space-quad) * -1)); } }
+  .skip-nav:hover {
+    background-color: var(--color-charcoal-011); }
+  .skip-nav:focus {
+    outline: 0.4rem solid var(--color-slate-blue-050);
+    outline-offset: 0.2rem;
+    transform: translate(var(--space-oct), var(--space-double)); }
+    @media (max-width: 575px) {
+      .skip-nav:focus {
+        transform: translate(var(--space-default), var(--space-default)); } }
+    @media (min-width: 576px) {
+      .skip-nav:focus {
+        transform: translate(var(--space-oct), var(--space-double)); } }
