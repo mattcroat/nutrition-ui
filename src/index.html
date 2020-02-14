@@ -10,15 +10,27 @@
     
     <a class="t-copy-large skip-nav" href="#mainContent">Skip to main content</a>
 
-    <header>
-      <a href="/">Nutrition</a>
-      <button>Open search</button>
-      <form action="">
-        <label for="globalSearch">Search the Nutrition website</label>
-        <input type="search" id="globalSearch" placeholder="Avocados, turmeric, kale, etc.">
-        <button type="submit">Search</button>
+    <header class="header">
+      <a class="t-brand brand" href="/">Nutrition</a>
+      <button class="button-icon">
+        <span class="screen-reader-only">Open search</span>
+        <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.707 15l5.657 5.657-.707.707L15 15.707l.707-.707z"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>
+        </svg>
+      </button>
+      <form class="search" action="">
+        <label class="screen-reader-only" for="globalSearch">Search the Nutrition website</label>
+        <input class="t-body search__input" type="search" id="globalSearch" placeholder="Avocados, turmeric, kale, etc.">
+        <button class="button-icon search__submit" type="submit">
+          <span class="screen-reader-only">Search</span>
+          <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.707 15l5.657 5.657-.707.707L15 15.707l.707-.707z"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>
+          </svg>
+        </button>
       </form>
-      <nav>
+      <nav class="screen-reader-only">
         <a href="/food">Food</a>
         <a href="/health">Health</a>
         <a href="/low-carb">Low Carb</a>

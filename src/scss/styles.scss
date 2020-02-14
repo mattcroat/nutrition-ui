@@ -178,6 +178,18 @@ body {
   }
 }
 
+/* screen reader only */
+.screen-reader-only {
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px); // deprecated
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  border: 0;
+}
+
 /* skip nav */
 .skip-nav {
   padding: var(--space-default);
@@ -223,5 +235,103 @@ body {
         transform: translate(var(--space-oct), var(--space-double));
       }
     }
+  }
+}
+
+/* header */
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  // mobile first
+  @media (max-width: 575px) {
+    & {
+      padding-right: var(--space-default);
+      padding-left: var(--space-default);
+      min-height: var(--space-quad);
+    }
+  }
+}
+
+/* brand */
+.brand {
+  color: var(--color-charcoal-021);
+  text-decoration: none;
+  transition: color var(--transition);
+
+  &:hover {
+    color: var(--color-charcoal-046);
+  }
+
+  &:focus {
+    outline: 0.4rem solid var(--color-slate-blue-050);
+    outline-offset: 0.2rem;
+  }
+}
+
+/* search */
+.button-icon {
+  padding: 0;
+  min-width: 4.8rem; // tab target size
+  min-height: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+
+    // .button-icon:hover .button-icon__icon
+    .button-icon__icon {
+      fill: var(--color-charcoal-046);
+    }
+  }
+
+  &:focus {
+    outline: 0.4rem solid var(--color-slate-blue-050);
+    outline-offset: -0.2rem;    
+  }
+
+  &__icon {
+    fill: var(--color-charcoal-021);
+    transition: fill var(--transition);
+  }
+}
+
+.search {
+  display: none;
+  position: relative;
+
+  &--is-open {
+    display: block;
+    position: absolute;
+    width: calc(100% - var(--space-default) - var(--space-default));
+  }
+
+  &__input {
+    width: 100%;
+    height: 4.8rem;
+    color: var(--color-charcoal-021);
+    border: none;
+    border-bottom: 0.2rem solid var(--color-charcoal-021);
+    transition: border-bottom-color var(--transition);
+
+    &::placeholder {
+      color: var(--color-charcoal-046);
+    }
+
+    &:focus {
+      border-bottom-color: var(--color-slate-blue-050);
+    }
+  }
+
+  &__submit {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
