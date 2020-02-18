@@ -222,11 +222,10 @@ body {
   &:focus {
     outline: 0.4rem solid var(--color-slate-blue-050);
     outline-offset: 0.2rem;
-    transform: translate(var(--space-oct), var(--space-double)); // appear
 
     @media (max-width: 575px) {
       & {
-        transform: translate(var(--space-default), var(--space-default));
+        transform: translate(var(--space-default), var(--space-default)); // appear
       }
     }  
 
