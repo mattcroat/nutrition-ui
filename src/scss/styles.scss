@@ -199,7 +199,11 @@ body {
   background-color: var(--color-charcoal-021);
   border-radius: var(--border-radius-default);
   text-decoration: none;
-  transition: background-color var(--transition), transform var(--transition);
+  transition:
+    background-color var(--transition),
+    transform var(--transition),
+    outline-color var(--transition);
+  outline: 0.4rem solid transparent;
   
   // mobile
   @media (max-width: 575px) {
@@ -220,7 +224,7 @@ body {
   }
   
   &:focus {
-    outline: 0.4rem solid var(--color-slate-blue-050);
+    outline-color: var(--color-slate-blue-050);
     outline-offset: 0.2rem;
 
     @media (max-width: 575px) {
@@ -258,14 +262,17 @@ body {
 .brand {
   color: var(--color-charcoal-021);
   text-decoration: none;
-  transition: color var(--transition);
+  transition:
+    color var(--transition),
+    outline-color var(--transition);
+  outline: 0.4rem solid transparent;
 
   &:hover {
     color: var(--color-charcoal-046);
   }
 
   &:focus {
-    outline: 0.4rem solid var(--color-slate-blue-050);
+    outline-color: var(--color-slate-blue-050);
     outline-offset: 0.2rem;
   }
 }
@@ -280,6 +287,8 @@ body {
   justify-content: center;
   background-color: transparent;
   border: none;
+  transition: outline-color var(--transition);
+  outline: 0.4rem solid transparent;
 
   &:hover {
     cursor: pointer;
@@ -291,7 +300,7 @@ body {
   }
 
   &:focus {
-    outline: 0.4rem solid var(--color-slate-blue-050);
+    outline-color: var(--color-slate-blue-050);
     outline-offset: -0.2rem;    
   }
 
