@@ -12,6 +12,7 @@
 
     <header class="header">
       <a class="t-brand brand" href="/">Nutrition</a>
+
       <div class="header__center">
         <button class="button-icon">
           <span class="screen-reader-only">Open search</span>
@@ -20,6 +21,7 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>
           </svg>
         </button>
+      
         <form class="search" action=""> <!-- search--is-open to show input -->
           <label class="screen-reader-only" for="globalSearch">Search the Nutrition website</label>
           <input class="t-body search__input" type="search" id="globalSearch" placeholder="Avocados, turmeric, kale, etc.">
@@ -31,6 +33,7 @@
             </svg>
           </button>
         </form>
+
         <nav class="center-nav">
           <ul class="center-nav__items">
             <li class="center-nav__item">
@@ -48,6 +51,7 @@
           </ul>
         </nav>
       </div>
+
       <button class="button-icon menu-trigger">
         <span class="t-copy-large">Menu</span>
         <svg class="button-icon__icon menu-trigger__icon--small" width="24" height="20" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg" role="presentation">
@@ -57,8 +61,16 @@
           <path d="M16 20h36v2H16zM0 2h36v2H0z"/>
         </svg>
       </button>
-      <nav class="menu">
-        <button>Close menu</button>
+
+      <nav class="menu menu--is-open">
+        <button class="button-icon menu__close">
+          <svg class="button-icon__icon menu__close__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <path d="M12 10.222L5.778 4 4 5.778 10.222 12 4 18.222 5.778 20 12 13.778 18.222 20 20 18.222 13.778 12 20 5.778 18.222 4 12 10.222z"/>
+          </svg>
+          <span class="screen-reader-only">Close </span>
+          <span class="t-copy-large">Menu</span>
+        </button>
+
         <ul>
           <li>
             <a href="/">Home</a>
@@ -85,17 +97,24 @@
           <a href="/careers">Careers</a>
         </li>
         </ul>
+
         <p>Connect</p>
+
         <a href="https://facebook.com">Facebook</a>
         <a href="https://twitter.com">Twitter</a>
-      </div>
-    </nav>
+      </nav>
+
+      <!-- since we already have a close button in the menu itself -->
+      <button class="menu__overlay menu__overlay--is-shown" aria-hidden="true">
+        <span class="screen-reader-only">Close menu</span>
+      </button>
     </header>
 
     <main id="mainContent">
       <article>
         <h1>20 Types of Berries and Their Health Benefits</h1>
         <h2>Blackberries</h2>
+        
         <p>
           As with all berries, blackberries also contain various
           health-protective polyphenols.
@@ -108,11 +127,13 @@
         <p>
           Studies also show that wild blackberries are 3 to 5 times higher in polyphenols, so get outside and pick your own.
         </p>
+        
         <img src="./assets/images/final/a-berry-full-glass-by-jess-watters-unsplash.jpg" alt="Blueberries in a bowl">
         <img src="./assets/images/final/chia-pudding-by-alex-loup-unsplash.jpg" alt="Chia pudding with blueberries and blackberries">
 
         <section>
           <h3>Nutrition Information</h3>
+
           <ul>
             <li>Calories: 62</li>
             <li>Carbohydrate: 15g</li>
@@ -123,6 +144,7 @@
         
         <section>
           <h3>Share this article</h3>
+          
           <a href="https://facebook.com">Share on Facebook</a>
           <a href="https://twitter.com">Share on Twitter</a>
         </section>
@@ -131,13 +153,16 @@
       <aside>
         <section>
           <h2>Related Articles</h2>
+
           <a href="/15-low-sugar-fruits">15 Low-Sugar Fruits High in Polyphenols</a>
           <a href="/15-best-low-carb-fruits">15 Best Low Carb Fruits</a>
         </section>
         
         <section>
           <h2>Choose article section</h2>
+
           <p>You are viewing section 03 of 20.</p>
+          
           <button>Go to the previous section</button>
           <button>Go to the next section</button>
         </section>
