@@ -62,7 +62,7 @@
         </svg>
       </button>
 
-      <nav class="menu menu--is-open">
+      <nav class="menu">
         <button class="button-icon menu__close">
           <svg class="button-icon__icon menu__close__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
             <path d="M12 10.222L5.778 4 4 5.778 10.222 12 4 18.222 5.778 20 12 13.778 18.222 20 20 18.222 13.778 12 20 5.778 18.222 4 12 10.222z"/>
@@ -71,41 +71,53 @@
           <span class="t-copy-large">Menu</span>
         </button>
 
-        <ul>
-          <li>
-            <a href="/">Home</a>
+        <ul class="menu__items">
+          <li class="menu__item menu__item--mobile-only">
+            <a class="t-link" href="/">Home</a>
           </li>
-          <li>
-            <a href="/food">Food</a>
+          <li class="menu__item menu__item--mobile-only">
+            <a class="t-link" href="/food">Food</a>
           </li>
-          <li>
-            <a href="/health">Health</a>
+          <li class="menu__item menu__item--mobile-only">
+            <a class="t-link" href="/health">Health</a>
           </li>
-          <li>
-            <a href="/low-carb">Low Carb</a>
+          <li class="menu__item menu__item--mobile-only">
+            <a class="t-link" href="/low-carb">Low Carb</a>
           </li>
-        <li>
-          <a href="/nutrition">Nutrition</a>
-        </li>
-        <li>
-          <a href="/about">About</a>
-        </li>
-        <li>
-          <a href="/submissions">Submissions</a>
-        </li>
-        <li>
-          <a href="/careers">Careers</a>
-        </li>
+          <li class="menu__item">
+            <a class="t-link" href="/nutrition">Nutrition</a>
+          </li>
+          <li class="menu__item">
+            <a class="t-link" href="/about">About</a>
+          </li>
+          <li class="menu__item">
+            <a class="t-link" href="/submissions">Submissions</a>
+          </li>
+          <li class="menu__item">
+            <a class="t-link" href="/careers">Careers</a>
+          </li>
         </ul>
 
-        <p>Connect</p>
+        <div class="menu__socials">
+          <p class="t-copy-large menu__social-cta">Connect</p>
 
-        <a href="https://facebook.com">Facebook</a>
-        <a href="https://twitter.com">Twitter</a>
+          <a class="button-icon menu__social" href="https://facebook.com">
+            <span class="screen-reader-only">Facebook</span>
+            <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <path d="M10.397 20v-7.156H8V10h2.397V7.76c0-2.435 1.487-3.76 3.66-3.76 1.04 0 1.934.078 2.193.112v2.544h-1.506c-1.181 0-1.41.563-1.41 1.385V10H16l-.366 2.844h-2.3V20"/>
+            </svg>
+          </a>
+          <a class="button-icon menu__social" href="https://twitter.com">
+            <span class="screen-reader-only">Twitter</span>
+            <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <path d="M18.355 9.239c.01.142.01.284.01.426 0 4.335-3.299 9.33-9.33 9.33A9.267 9.267 0 0 1 4 17.523c.264.03.518.04.792.04a6.568 6.568 0 0 0 4.071-1.4 3.285 3.285 0 0 1-3.066-2.275c.203.03.406.051.62.051.294 0 .588-.04.862-.112a3.28 3.28 0 0 1-2.63-3.218v-.04c.437.243.945.395 1.483.416A3.277 3.277 0 0 1 4.67 8.254c0-.61.162-1.168.447-1.655a9.321 9.321 0 0 0 6.761 3.431 3.7 3.7 0 0 1-.081-.75A3.278 3.278 0 0 1 15.077 6c.943 0 1.796.396 2.395 1.036a6.456 6.456 0 0 0 2.081-.792 3.27 3.27 0 0 1-1.441 1.807c.66-.071 1.3-.254 1.888-.508a7.048 7.048 0 0 1-1.645 1.696z"/>
+            </svg>
+          </a>
+        </div>
       </nav>
 
       <!-- since we already have a close button in the menu itself -->
-      <button class="menu__overlay menu__overlay--is-shown" aria-hidden="true">
+      <button class="menu__overlay" aria-hidden="true">
         <span class="screen-reader-only">Close menu</span>
       </button>
     </header>

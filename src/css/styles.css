@@ -216,11 +216,13 @@ body {
   justify-content: space-between; }
   @media (max-width: 1024px) {
     .header {
+      margin-bottom: var(--space-double);
       padding-right: var(--space-default);
       padding-left: var(--space-default);
       min-height: var(--space-quad); } }
   @media (min-width: 1025px) {
     .header {
+      margin-bottom: var(--space-quad);
       padding-right: var(--space-oct);
       padding-left: var(--space-oct);
       min-height: var(--space-oct); } }
@@ -325,8 +327,7 @@ body {
     bottom: 0;
     background-color: var(--color-white);
     box-shadow: -0.4rem 0 4rem 0 rgba(40, 51, 67, 0.3);
-    overflow-y: auto;
-    padding-bottom: var(--space-quad); }
+    overflow-y: auto; }
     @media (max-width: 575px) {
       .menu--is-open {
         padding-right: var(--space-double);
@@ -344,8 +345,47 @@ body {
       .menu--is-open {
         padding-top: 4rem; } }
 
+@media (max-width: 575px) {
+  .menu__close {
+    margin-bottom: var(--space-quad); } }
+
+@media (min-width: 576px) {
+  .menu__close {
+    margin-bottom: var(--space-oct); } }
+
 .menu__close__icon {
   margin-right: var(--space-default); }
+
+.menu__items {
+  margin-top: 0;
+  padding: 0;
+  list-style: none; }
+  @media (max-width: 575px) {
+    .menu__items {
+      margin-bottom: var(--space-quad); } }
+  @media (min-width: 576px) {
+    .menu__items {
+      margin-bottom: var(--space-oct); } }
+  .menu__items .menu__item {
+    margin-bottom: var(--space-double); }
+    @media (max-width: 786px) {
+      .menu__items .menu__item--mobile-only {
+        display: block; } }
+    @media (min-width: 787px) {
+      .menu__items .menu__item--mobile-only {
+        display: none; } }
+
+.menu__socials {
+  padding-bottom: var(--space-quad);
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .menu__socials .menu__social {
+    margin-left: var(--space-default);
+    border-radius: 50%;
+    border: 0.2rem solid var(--color-charcoal-046); }
+    .menu__socials .menu__social-cta {
+      color: var(--color-charcoal-046); }
 
 .menu__overlay {
   display: none; }
