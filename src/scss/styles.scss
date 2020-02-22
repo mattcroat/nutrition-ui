@@ -135,12 +135,17 @@ body {
     & {
       font-size: 3.2rem;
       line-height: 1.25; // 40px line height / 32px font size = 1.25
-      color: red;
-      background: red;
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 1399px) {
+    & {
+      font-size: 5.6rem;
+      line-height: 1.143;
     }
   }
   
-  @media (min-width: 576px) {
+  @media (min-width: 1400px) {
     & {
       font-size: 8rem;
       line-height: 1.2; // 96px / 80px = 1.2
@@ -177,7 +182,7 @@ body {
 .t-section-number {
   font-family: var(--font-family-serif);
   font-size: 12rem;
-  line-height: 1rem; // same proportion
+  line-height: 1; // same proportion
   letter-spacing: -0.2rem;
 }
 
@@ -565,23 +570,6 @@ body {
   }
 }
 
-.menu__socials {
-  padding-bottom: var(--space-quad);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  .menu__social {
-    margin-left: var(--space-default);
-    border-radius: 50%;
-    border: 0.2rem solid var(--color-charcoal-046);
-
-    &-cta {
-      color: var(--color-charcoal-046);
-    }
-  }
-}
-
 .menu__overlay {
   display: none;
 
@@ -599,4 +587,87 @@ body {
     opacity: 0.4;
     border: none;
   }
+}
+
+/* social */
+.socials {
+  padding-bottom: var(--space-quad);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .social {
+    margin-left: var(--space-default);
+    border-radius: 50%;
+    border: 0.2rem solid var(--color-charcoal-046);
+
+    &__cta {
+      color: var(--color-charcoal-046);
+    }
+  }
+}
+
+/* main */
+.main {
+  @media (max-width: 1199px) {
+    & {
+      padding-right: var(--space-default);
+      padding-left: var(--space-default);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-areas: '. aside . article .';
+    grid-template-columns: var(--space-oct) minmax(28.8rem, 36rem) var(--space-oct) 1fr var(--space-oct);
+  }
+}
+
+/* article */
+.article {
+  grid-area: article;
+
+  &__heading {
+    margin: 0;
+    color: var(--color-charcoal-021);
+  }
+
+  &__section-heading {
+    display: flex;
+    align-items: center;
+    color: var(--color-charcoal-021);
+
+    &::after {
+      content: '';
+      margin-left: var(--space-default);
+      width: 3.6rem;
+      height: 0.2rem;
+      display: inline-block;
+      background-color: var(--color-charcoal-021) ;
+    }
+  }
+
+  &__body {
+    color: var(--color-charcoal-046);
+  }
+}
+
+/* nutrition info */
+.nutrition__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .nutrition__item {
+    color: var(--color-charcoal-021);
+
+    &--value {
+      color: var(--color-charcoal-046);
+    }
+  }
+}
+
+/* aside */
+.aside {
+  grid-area: aside;
 }
